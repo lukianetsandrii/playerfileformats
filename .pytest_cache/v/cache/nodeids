@@ -1,3 +1,4 @@
 [
-  "tests.py::TestPlayDiffMediaTypes::()::test_media_files_types"
+  "test_orientation.py::TestPlayDiffMediaTypes::()::test_open_video_portrait", 
+  "test_orientation.py::TestPlayDiffMediaTypes::()::test_open_picture_portrait_landscape"
 ]

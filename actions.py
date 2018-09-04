@@ -1,37 +1,44 @@
-import time
 
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
-import locators
 import drivers
 
 
 class Actions(drivers.Driver):
 
-    def isObjectPresent(self, driver, object):
+    def isObjectPresentID(self, driver, object):
         if WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, object))).is_displayed():
             return True
         else:
             return False
 
-    def isObjectExists(self, driver, object):
+    def isObjectExistsID(self, driver, object):
         objects_list = driver.find_elements_by_id(object)
-        assert len(objects_list) < 1
+        # assert len(objects_list) < 1
 
-        # if len(objects_list) < 1:
-        #     return True
-        # else:
-        #     return False
+        if len(objects_list) < 1:
+            return False
+        else:
+            return True
 
-    def getText(self, driver, locator):
+    def getTextID(self, driver, locator):
         WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, locator)))
         result_text = driver.find_element_by_id(locator).text
 
         return result_text
 
-    def clickButton(self, driver, button):
+    def getFewTextsID(self, driver, locator):
+        WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, locator)))
+        elements_list = driver.find_elements_by_id(locator)
+        texts_list = []
+        for element in elements_list:
+            text = element.text
+            texts_list.append(text)
+        return texts_list
+
+    def clickButtonID(self, driver, button):
         WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, button)))
         some_button = driver.find_element_by_id(button)
         some_button.click()
@@ -57,14 +64,6 @@ class Actions(drivers.Driver):
     #
     #     return actual_region_text
     #
-    # def pass_introduction(self, driver):
-    #     self.clickButton(driver, IntroLocators.INTRO_PAGE_SHOW_BUTTON)
-    #     time.sleep(1)
-    #     self.swipeToLeft(driver)
-    #     time.sleep(1)
-    #     self.swipeToLeft(driver)
-    #     time.sleep(1)
-    #     self.swipeToLeft(driver)
     #
     # def enable_geolocation_button(self, driver):
     #     self.clickButton(driver, IntroLocators.INTRO_PAGE_START_BUTTON)
