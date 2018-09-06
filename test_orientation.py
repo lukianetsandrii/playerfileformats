@@ -7,7 +7,7 @@ from drivers import Driver as driver
 
 class TestPlayDiffMediaTypes(driver, Actions):
 
-    def test_open_video_portrait(self, driver):
+    def test_open_video_portrait_landscape(self, driver):
         Actions.clickButtonXP(self, driver, Locators.MENU_BUTTON_XP)
         Actions.clickButtonXP(self, driver, Locators.SD_CARD_BUTTON_XP)
         Actions.clickButtonXP(self, driver, Locators.TEST_FOLDER_BUTTON_XP)

@@ -21,11 +21,13 @@ class Locators:
     TEST_FOLDER_BUTTON_XP = '//android.widget.TextView[@text="TestMediaData"]'
     VIDEOS_FOLDER_BUTTON_XP = '//android.widget.TextView[@text="Video"]'
     PICTURES_FOLDER_BUTTON_XP = '//android.widget.TextView[@text="Pictures"]'
+    BUGS_FOLDER_BUTTON_XP = '//android.widget.TextView[@text="bugs_tests_data"]'
 
     # Video files
     MP4_FILE_XP = '//android.widget.TextView[@text="mp4_test"]'
     MKV_FILE_XP = '//android.widget.TextView[@text="mkv_test"]'
     GP3_FILE_XP = '//android.widget.TextView[@text="3gp_test"]'
+    V4_TEST_VIDEO = '//android.widget.TextView[@text="trailer_sizzle_v4"]'
 
     # Picture files
     JPEG_FILE_XP = '//android.widget.TextView[@text="jpg_test"]'
@@ -37,6 +39,11 @@ class Locators:
 
     # Video player buttons
     TIME_POSITION_ID = 'com.leialoft.redmediaplayer:id/exo_position'
+    PAUSE_BUTTON_ID = 'com.leialoft.redmediaplayer:id/exo_pause'
+    NEXT_TRACK_BUTTON_ID = 'com.leialoft.redmediaplayer:id/exo_next_video'
+    PREV_TRACK_BUTTON_ID ='com.leialoft.redmediaplayer:id/exo_prev_video'
+    INTERLACE_BUTTON_ID = 'com.leialoft.redmediaplayer:id/playback_interlace_button'
+
 
     # Sort buttons
     DATE_DESCENDING_BUTTON_XP ='//android.widget.LinearLayout[1]/android.widget.TextView'
