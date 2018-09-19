@@ -49,9 +49,9 @@ class TestSortingView(driver, Actions):
         Actions.clickButtonID(self, driver, Locators.VIEW_BUTTON_ID)
 
         # List mode view
-        assert Actions.isObjectPresentID(self, driver, Locators.FILE_DATE_TEXT_ID) is True
-        assert Actions.isObjectPresentID(self, driver, Locators.FILE_SIZE_TEXT_ID) is True
-        assert Actions.isObjectPresentID(self, driver, Locators.FILE_TYPE_TEXT_ID) is True
+        assert Actions.isObjectExistsID(self, driver, Locators.FILE_DATE_TEXT_ID) is True
+        assert Actions.isObjectExistsID(self, driver, Locators.FILE_SIZE_TEXT_ID) is True
+        assert Actions.isObjectExistsID(self, driver, Locators.FILE_TYPE_TEXT_ID) is True
 
         Actions.clickButtonID(self, driver, Locators.VIEW_BUTTON_ID)
 

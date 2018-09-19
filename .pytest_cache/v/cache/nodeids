@@ -1,4 +1,5 @@
 [
-  "test_orientation.py::TestPlayDiffMediaTypes::()::test_open_video_portrait", 
-  "test_orientation.py::TestPlayDiffMediaTypes::()::test_open_picture_portrait_landscape"
+  "test_submenu.py::Test_CreateFolder_SelectOneAllfile_Aboutpage_Deletefile::()::test_create_folder_select_one_all_about", 
+  "test_submenu.py::Test_CreateFolder_SelectOneAllfile_Aboutpage_Deletefile::()::test_move_file", 
+  "test_submenu.py::Test_CreateFolder_SelectOneAllfile_Aboutpage_Deletefile::()::test_delete_file"
 ]

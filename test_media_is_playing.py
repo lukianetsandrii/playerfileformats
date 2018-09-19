@@ -8,6 +8,11 @@ from drivers import Driver as driver
 class TestPlayDiffMediaTypes(driver, Actions):
 
     def test_media_files_types(self, driver):
+
+        #TODO to hadle permissions
+        if Actions.isObjectExistsID(self, driver, Locators.ALLOW_ACCESS_BUTTON_ID) == True:
+            Actions.clickButtonID(self, driver, Locators.ALLOW_ACCESS_BUTTON_ID)
+
         Actions.clickButtonXP(self, driver, Locators.MENU_BUTTON_XP)
         Actions.clickButtonXP(self, driver, Locators.SD_CARD_BUTTON_XP)
         Actions.clickButtonXP(self, driver, Locators.TEST_FOLDER_BUTTON_XP)
